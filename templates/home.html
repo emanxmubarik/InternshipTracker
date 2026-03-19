@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Internship Tracker</title>
+    <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="topbar">
+        <div class="brand">Internship & Extracurricular Tracker</div>
+        <div class="top-links">
+            <a href="/home">Home</a>
+            <a href="/add">Add Application</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
     <div class="page-layout">
         <div class="sidebar">
             <h2>Menu</h2>
@@ -27,7 +36,7 @@
                 {% for app in applications %}
                 <tr>
                     <td>{{ app.company }}</td>
-                    <td>{{ app.position }}</td>
+                    <td>{{ app.role }}</td>
                     <td>{{ app.category }}</td>
                     <td>{{ app.status }}</td>
                     <td>{{ app.deadline }}</td>
