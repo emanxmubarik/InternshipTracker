@@ -1,4 +1,3 @@
-/* General */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +5,6 @@ body {
     color: #333;
 }
 
-/* Navbar */
 .navbar {
     background: #6d28d9;
     color: white;
@@ -27,13 +25,11 @@ body {
     text-decoration: underline;
 }
 
-/* Layout */
 .page-layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
     width: 220px;
     background: #5b21b6;
@@ -61,19 +57,16 @@ body {
     background: #ddd6fe;
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     padding: 40px;
 }
 
-/* Title */
 .main-content h1 {
     margin-bottom: 20px;
     color: #4c1d95;
 }
 
-/* Table */
 .excel-table {
     width: 100%;
     border-collapse: collapse;
@@ -99,7 +92,6 @@ body {
     background: #f5f3ff;
 }
 
-/* Delete button */
 .excel-table a {
     color: #dc2626;
     text-decoration: none;
@@ -110,7 +102,6 @@ body {
     text-decoration: underline;
 }
 
-/* Form Styling */
 .form-box {
     width: 400px;
     margin: 80px auto;
@@ -150,7 +141,6 @@ body {
     background: #5b21b6;
 }
 
-/* Login page */
 .login-page {
     display: flex;
     justify-content: center;
