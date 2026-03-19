@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Preview Application{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>Application Preview</h1>
+
+    <p><strong>Company:</strong> {{ application.company }}</p>
+    <p><strong>Role:</strong> {{ application.role }}</p>
+    <p><strong>Category:</strong> {{ application.category }}</p>
+    <p><strong>Status:</strong> {{ application.status }}</p>
+    <p><strong>Applied Date:</strong> {{ application.applied_date }}</p>
+    <p><strong>Deadline:</strong> {{ application.deadline }}</p>
+
+    <p><strong>Job Link:</strong>
+        {% if application.job_link %}
+            <a href="{{ application.job_link }}" target="_blank">{{ application.job_link }}</a>
+        {% else %}
+            N/A
+        {% endif %}
+    </p>
+
+    <p><strong>Notes:</strong></p>
+    <p>{{ application.notes if application.notes else "No notes added." }}</p>
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</div>
+{% endblock %}

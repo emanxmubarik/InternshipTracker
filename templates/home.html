@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-layout">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="/add" class="menu-btn">Add Application</a>
+        </div>
+
+        <div class="main-content">
+            <h1>Internship Tracker</h1>
+
+            <table class="excel-table">
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Deadline</th>
+                    <th>Delete</th>
+                </tr>
+
+                {% for app in applications %}
+                <tr>
+                    <td>{{ app.company }}</td>
+                    <td>{{ app.position }}</td>
+                    <td>{{ app.category }}</td>
+                    <td>{{ app.status }}</td>
+                    <td>{{ app.deadline }}</td>
+                    <td><a href="/delete/{{ app.id }}">X</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
