@@ -1,15 +1,33 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="topbar">
+        <div class="brand">Internship & Extracurricular Tracker</div>
+        <div class="top-links">
+            <a href="/">Login</a>
+            <a href="/register">Register</a>
+        </div>
+    </div>
 
-{% block title %}Login{% endblock %}
+    <div class="auth-page">
+        <div class="auth-card">
+            <h1>Login</h1>
+            <p class="auth-subtext">Login to manage your applications.</p>
 
-{% block content %}
-<div class="card">
-    <h1>Login</h1>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Enter username" required>
-        <input type="password" name="password" placeholder="Enter password" required>
-        <button type="submit">Login</button>
-    </form>
-    <p class="message">{{ message }}</p>
-</div>
-{% endblock %}
+            {% if message %}
+                <p class="message">{{ message }}</p>
+            {% endif %}
+
+            <form method="POST">
+                <input type="text" name="username" placeholder="Enter username" required>
+                <input type="password" name="password" placeholder="Enter password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
